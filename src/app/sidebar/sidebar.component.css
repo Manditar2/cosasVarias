@@ -1,0 +1,28 @@
+.main {
+    width: 100%;
+    height: 75%;
+    overflow: auto;
+    border-radius: 5px;
+    background-color: #0d1117;
+}
+
+.sidebar_option {
+    box-sizing: border-box;
+    height: 20%;
+    width: 100%;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: #e9f2ff;
+    border: double 10px transparent;
+    border-radius: 20px;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.sidebar_option:hover {
+    filter: hue-rotate(35deg)
+}

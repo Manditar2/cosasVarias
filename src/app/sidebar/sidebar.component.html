@@ -1,0 +1,7 @@
+<div class = "main">
+    @for (option of sidebar_options; track option.id){
+        <div class = "sidebar_option" style="background-image: url('{{option.url}}');">
+            {{ option.name }}
+        </div>
+    }
+</div>
