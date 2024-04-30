@@ -2,7 +2,8 @@ import java.util.Queue;
 import java.util.LinkedList;
 
 /* 
-There is an undirected graph with n nodes, where each node is numbered between 0 and n - 1. You are given a 2D array graph, where graph[u] is an array of nodes that node u is adjacent to. More formally, for each v in graph[u], there is an undirected edge between node u and node v. The graph has the following properties:
+There is an undirected graph with n nodes, where each node is numbered between 0 and n - 1. You are given a 2D array graph, where graph[u] is an array of nodes that node u is adjacent to. More formally,
+for each v in graph[u], there is an undirected edge between node u and node v. The graph has the following properties:
 
 There are no self-edges (graph[u] does not contain u).
 There are no parallel edges (graph[u] does not contain duplicate values).
@@ -62,3 +63,12 @@ public class IsBipartite {
         return true;
     }
 }
+
+/*
+El enfoque para resolver este problema fue aplicar un BFS y 2 sets que almacenan a qué subconjunto pertenece el nodo que se está recorriendo.
+
+whichSet[currentNodo] = 0 implica que dicho nodo se encuentra en el set 0
+whichSet[currentNodo] = 1 implica que dicho nodo se encuentra en el set 1
+
+Si el nodo padre en el BFS está en el mismo set que su nodo hijo, entonces no se puede producir una bi partición.
+ */
